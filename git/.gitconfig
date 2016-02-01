@@ -10,7 +10,7 @@ autosetuprebase = always
 default = current
 
 [core]
-	excludesfile = /Users/mattss/.gitignore
+excludesfile = /Users/mattss/.gitignore
 
 [color]
 diff = auto
@@ -44,4 +44,4 @@ lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen
 unstash = stash apply
 
 [help]
-	autocorrect = 5
+autocorrect = 5
