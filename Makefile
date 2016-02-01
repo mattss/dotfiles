@@ -6,7 +6,7 @@ endef
 
 need-help := $(filter help,$(MAKECMDGOALS))
 
-help: ; @echo $(if $(need-help),,Type \'$(MAKE)$(dash-f) help\' to get help)
+help: ; @echo $(if $(need-help),,Type \'make help\' to get help)
 update: clean re-install
 
 install: $(call print-help,install,creates symlinks to setup dot-files)
