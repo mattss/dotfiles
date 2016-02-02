@@ -1,0 +1,67 @@
+config defaultToCurrentScreen true
+# Shows app icons and background apps, spreads icons in the same place.
+config windowHintsShowIcons true
+config windowHintsIgnoreHiddenWindows false
+config windowHintsSpread true
+
+# Monitors
+alias laptop-screen       1280x800
+alias desk-monitor        1920x1080
+alias pp-screen           1280x720
+
+# Abstract positions
+alias full move screenOriginX;screenOriginY screenSizeX;screenSizeY
+alias lefthalf move screenOriginX;screenOriginY screenSizeX/2;screenSizeY
+alias righthalf move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY
+alias topleft corner top-left resize:screenSizeX/2;screenSizeY/2
+alias topright corner top-right resize:screenSizeX/2;screenSizeY/2
+alias bottomleft corner bottom-left resize:screenSizeX/2;screenSizeY/2
+alias bottomright corner bottom-right resize:screenSizeX/2;screenSizeY/2
+
+# Special positions
+alias leftmost move screenOriginX;screenOriginY (screenSizeX/2)+350;screenSizeY
+alias windowed-middle move 300;50 1280;880
+alias windowed-left move 50;50 1280;880
+alias doubleeighty move screenSizeX-1166;screenOriginY 1166;screenSizeY
+alias singleeighty move screenSizeX-585;screenOriginY 585;screenSizeY
+alias iterm-wide move screenOriginX+10;screenSizeY-500 700;500
+alias iterm-thin move screenOriginX+10;screenSizeY-500 650;500
+alias timelog-br corner bottom-right resize:438;515
+
+# Default desk layout
+layout desk 'iTerm':REPEAT ${iterm-wide} ${desk-monitor}
+layout desk 'Emacs':REPEAT ${doubleeighty} ${desk-monitor}
+layout desk 'Calendar':REPEAT ${full} ${laptop-screen}
+layout desk 'Mail':REPEAT ${leftmost} ${desk-monitor}
+layout desk 'Adium':REPEAT ${topleft} ${laptop-screen} | ${topright} ${laptop-screen}
+layout desk 'Google Chrome':REPEAT ${windowed-middle} ${desk-monitor}
+layout desk 'Firefox':REPEAT ${windowed-left} ${desk-monitor}
+layout desk 'Timelog':REPEAT ${timelog-br} ${laptop-screen}
+
+# Solo macbook layout
+layout solo 'iTerm':REPEAT ${iterm-thin} ${laptop-screen}
+layout solo 'Emacs' ${singleeighty} ${laptop-screen}
+layout solo 'Google Chrome':REPEAT ${full} ${laptop-screen}
+layout solo 'Firefox':REPEAT ${full} ${laptop-screen}
+layout solo 'Mail':REPEAT ${full} ${desk-monitor}
+layout solo 'Adium':REPEAT ${topleft} ${laptop-screen} | ${topright} ${laptop-screen}
+layout solo 'Timelog':REPEAT ${timelog-br} ${laptop-screen}
+
+# PP layout
+layout pp 'iTerm':REPEAT ${iterm-wide} ${pp-screen}
+layout pp 'Emacs':REPEAT ${doubleeighty} ${pp-screen}
+layout pp 'Calendar':REPEAT ${full} ${laptop-screen}
+layout pp 'Mail':REPEAT ${full} ${laptop-screen}
+layout pp 'Adium':REPEAT ${topleft} ${laptop-screen} | ${topright} ${laptop-screen}
+layout pp 'Google Chrome':REPEAT ${full} ${laptop-screen}
+layout pp 'Firefox':REPEAT ${full} ${pp-screen}
+layout desk 'Timelog':REPEAT ${timelog-br} ${laptop-screen}
+
+# Bindings
+bind j:cmd;alt layout solo
+bind k:cmd;alt layout desk
+bind l:cmd;alt layout pp
+default solo resolutions:${laptop-screen}
+default desk resolutions:${laptop-screen};${desk-monitor}
+default pp resolutions:${laptop-screen};${pp-screen}
+
