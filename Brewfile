@@ -1,3 +1,8 @@
+# Setup
+tap 'homebrew/bundle'
+tap 'caskroom/cask'
+tap 'railwaycat/emacsmacport'
+
 # Common utities
 brew "ack"
 brew "autojump"
