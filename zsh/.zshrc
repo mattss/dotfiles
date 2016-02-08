@@ -74,6 +74,7 @@ export EDITOR='emacs'
 alias activate-2.4="source /home/dev/buildout.python/python-2.4/bin/activate"
 alias activate-2.6="source /home/dev/buildout.python/python-2.6/bin/activate"
 alias activate-2.7="source /home/dev/buildout.python/python-2.7/bin/activate"
+alias bootstrap-2.7="/home/dev/buildout.python/python-2.7/bin/python bootstrap.py"
 
 # emacs gui alias
 alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
