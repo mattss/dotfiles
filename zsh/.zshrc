@@ -7,10 +7,6 @@ ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="robbyrussell"
 
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
@@ -67,9 +63,6 @@ export EDITOR='emacs'
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
-
 # python virtual envs
 alias activate-2.4="source /home/dev/buildout.python/python-2.4/bin/activate"
 alias activate-2.6="source /home/dev/buildout.python/python-2.6/bin/activate"
@@ -85,17 +78,6 @@ export ZSH_THEME_GIT_PROMPT_NOCACHE=1
 source $HOME/.zsh/git-prompt/zshrc.sh
 # This is the default prompt with the git super status added
 PROMPT='${ret_status}%{$fg_bold[green]%}%p %{$fg[cyan]%}%c %{$fg_bold[blue]%}$(git_super_status)%{$fg_bold[blue]%} % %{$reset_color%}'
-
-# More helpful history completion with up/down
-# http://superuser.com/questions/417627/oh-my-zsh-history-completion
-#bindkey '^\e[A' history-beginning-search-backward
-#bindkey '^\e[B' history-beginning-search-forward
-
-
-# lolcommits
-export LOLCOMMITS_DELAY=2
-export LOLCOMMITS_FORK=1
-
 
 # Syntax highlighting
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
