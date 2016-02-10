@@ -82,7 +82,7 @@ alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
 # custom git prompt from https://github.com/olivierverdier/zsh-git-prompt
 # (update the git status on every prompt line)
 export ZSH_THEME_GIT_PROMPT_NOCACHE=1
-source /Users/mattss/.zsh/git-prompt/zshrc.sh
+source $HOME/.zsh/git-prompt/zshrc.sh
 # This is the default prompt with the git super status added
 PROMPT='${ret_status}%{$fg_bold[green]%}%p %{$fg[cyan]%}%c %{$fg_bold[blue]%}$(git_super_status)%{$fg_bold[blue]%} % %{$reset_color%}'
 
