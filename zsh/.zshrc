@@ -85,6 +85,9 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # Add RVM to PATH for scripting
 export PATH="$PATH:$HOME/.rvm/bin"
 
+# Add Python to PATH for scripting
+export PATH="$PATH:$HOME/Library/Python/2.7/bin"
+
 # Github aliasing
 eval "$(hub alias -s)"
 
