@@ -7,6 +7,9 @@
 ;;; Code:
 (setq custom-theme-directory (locate-user-emacs-file "themes"))
 
+;; Material theme
+(load-theme 'material t)
+
 ;; Dir for custom elisp
 (defvar user-lisp-directory (expand-file-name "~/elisp")
   "Place to load local LISP code from.")
