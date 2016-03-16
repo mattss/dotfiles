@@ -46,8 +46,7 @@ plugins=(git github brew autojump fabric osx hub vagrant)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-
-export PATH=/home/dev/devtools/scripts:$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/Dropbox/Scripts:/home/dev/devtools/scripts:$HOME/bin:/usr/local/bin:$PATH
 
 
 # export MANPATH="/usr/local/man:$MANPATH"
