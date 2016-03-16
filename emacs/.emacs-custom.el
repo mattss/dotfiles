@@ -15,10 +15,6 @@
 (require 'magit)
 (require 'use-package)
 
-(add-hook 'robot-mode-hook
-	  '(lambda ()
-	     (setq indent-tabs-mode nil)))
-
 (setq gist-view-gist t)
 
 (global-set-key (kbd "<left-fringe> <double-mouse-1>") 'py-insert-debug)
@@ -28,9 +24,6 @@
   (auto-fill-mode t))
 
 (add-hook 'rst-mode #'py-handle-rst-docs)
-
-(load-file "~/elisp/robot-mode.el")
-(add-to-list 'auto-mode-alist '("\\.robot\\'" . robot-mode))
 
 (setq tramp-auto-save-directory "/tmp")
 
