@@ -17,17 +17,19 @@
 
 (setq gist-view-gist t)
 
+;; Click fringe for pdb
 (global-set-key (kbd "<left-fringe> <double-mouse-1>") 'py-insert-debug)
 
+;; Better rst support
 (defun py-handle-rst-docs ()
   "Handle rst docs nicely."
   (auto-fill-mode t))
-
 (add-hook 'rst-mode #'py-handle-rst-docs)
 
+;; Fix auto-save support for tramp
 (setq tramp-auto-save-directory "/tmp")
 
-; pylint
+; pylint support
 (autoload 'pylint "pylint")
 (add-hook 'python-mode-hook 'pylint-add-menu-items)
 ;;(add-hook 'python-mode-hook 'pylint-add-key-bindings)
