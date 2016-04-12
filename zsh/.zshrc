@@ -89,6 +89,3 @@ export PATH="$PATH:$HOME/Library/Python/2.7/bin"
 
 # Github aliasing
 eval "$(hub alias -s)"
-
-# Grunt aliasing
-eval "$(grunt --completion=zsh)"
