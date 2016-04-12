@@ -39,7 +39,7 @@ l = log
 ll = log -p
 b = branch
 reha = reset --hard
-info = remote show origin
+info = !git remote show origin | grep URL
 lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
 unstash = stash apply
 
