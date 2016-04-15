@@ -10,7 +10,7 @@ autosetuprebase = always
 default = current
 
 [core]
-excludesfile = /Users/mattss/.gitignore
+excludesfile = ~/.gitignore
 
 [color]
 diff = auto
