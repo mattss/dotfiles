@@ -22,11 +22,13 @@ alias bottomright corner bottom-right resize:screenSizeX/2;screenSizeY/2
 alias leftmost move screenOriginX;screenOriginY (screenSizeX/2)+350;screenSizeY
 alias windowed-middle move 300;50 1280;880
 alias windowed-left move 50;50 1280;880
+alias windowed-left-offset move 150;50 1380;880
 alias doubleeighty move screenSizeX-1166;screenOriginY 1166;screenSizeY
 alias singleeighty move screenSizeX-585;screenOriginY 585;screenSizeY
 alias iterm-wide move screenOriginX+10;screenSizeY-500 700;500
 alias iterm-thin move screenOriginX+10;screenSizeY-500 650;500
 alias timelog-br corner bottom-right resize:438;515
+alias slack-bl corner bottom-left resize:800;480
 
 # Default desk layout
 layout desk 'iTerm':REPEAT ${iterm-wide} ${desk-monitor}
@@ -34,9 +36,10 @@ layout desk 'Emacs':REPEAT ${doubleeighty} ${desk-monitor}
 layout desk 'Calendar':REPEAT ${full} ${laptop-screen}
 layout desk 'Mail':REPEAT ${leftmost} ${desk-monitor}
 layout desk 'Adium':REPEAT ${topleft} ${laptop-screen} | ${topright} ${laptop-screen}
-layout desk 'Google Chrome':REPEAT ${windowed-middle} ${desk-monitor}
+layout desk 'Google Chrome':REPEAT ${windowed-left-offset} ${desk-monitor}
 layout desk 'Firefox':REPEAT ${windowed-left} ${desk-monitor}
 layout desk 'Timelog':REPEAT ${timelog-br} ${laptop-screen}
+layout desk 'Slack':REPEAT ${slack-bl} ${laptop-screen}
 
 # Solo macbook layout
 layout solo 'iTerm':REPEAT ${iterm-thin} ${laptop-screen}
@@ -57,10 +60,12 @@ layout pp 'Google Chrome':REPEAT ${full} ${laptop-screen}
 layout pp 'Firefox':REPEAT ${full} ${pp-screen}
 layout desk 'Timelog':REPEAT ${timelog-br} ${laptop-screen}
 
-# Bindings
+# Key Bindings
 bind j:cmd;alt layout solo
 bind k:cmd;alt layout desk
 bind l:cmd;alt layout pp
+
+# Resolution bindings
 default solo resolutions:${laptop-screen}
 default desk resolutions:${laptop-screen};${desk-monitor}
 default pp resolutions:${laptop-screen};${pp-screen}
