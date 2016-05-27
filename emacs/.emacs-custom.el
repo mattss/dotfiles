@@ -20,6 +20,11 @@
 
 (setq gist-view-gist t)
 
+;; emmet a.k.a zencoding
+;; https://github.com/smihica/emmet-mode
+(require 'emmet-mode)
+(add-hook 'sgml-mode-hook 'emmet-mode) ;; Auto-start on any markup modes
+
 ;; Click fringe for pdb
 (global-set-key (kbd "<left-fringe> <double-mouse-1>") 'py-insert-debug)
 
