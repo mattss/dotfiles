@@ -31,7 +31,7 @@ alias timelog-br corner bottom-right resize:438;515
 alias slack-bl corner bottom-left resize:800;480
 
 # Default desk layout
-layout desk 'iTerm':REPEAT ${iterm-wide} ${desk-monitor}
+layout desk 'iTerm2':REPEAT ${iterm-wide} ${desk-monitor}
 layout desk 'Emacs':REPEAT ${doubleeighty} ${desk-monitor}
 layout desk 'Calendar':REPEAT ${full} ${laptop-screen}
 layout desk 'Mail':REPEAT ${leftmost} ${desk-monitor}
@@ -42,7 +42,7 @@ layout desk 'Timelog':REPEAT ${timelog-br} ${laptop-screen}
 layout desk 'Slack':REPEAT ${slack-bl} ${laptop-screen}
 
 # Solo macbook layout
-layout solo 'iTerm':REPEAT ${iterm-thin} ${laptop-screen}
+layout solo 'iTerm2':REPEAT ${iterm-thin} ${laptop-screen}
 layout solo 'Emacs' ${singleeighty} ${laptop-screen}
 layout solo 'Google Chrome':REPEAT ${full} ${laptop-screen}
 layout solo 'Firefox':REPEAT ${full} ${laptop-screen}
@@ -51,7 +51,7 @@ layout solo 'Adium':REPEAT ${topleft} ${laptop-screen} | ${topright} ${laptop-sc
 layout solo 'Timelog':REPEAT ${timelog-br} ${laptop-screen}
 
 # PP layout
-layout pp 'iTerm':REPEAT ${iterm-wide} ${pp-screen}
+layout pp 'iTerm2':REPEAT ${iterm-wide} ${pp-screen}
 layout pp 'Emacs':REPEAT ${doubleeighty} ${pp-screen}
 layout pp 'Calendar':REPEAT ${full} ${laptop-screen}
 layout pp 'Mail':REPEAT ${full} ${laptop-screen}
