@@ -1,7 +1,7 @@
-#!/usr/bin/env
+#!/usr/bin/env python2.7
 # -*- coding: utf-8 -*-
 # change those symbols to whatever you prefer
-symbols = {'ahead of': '↑', 'behind': '↓', 'prehash': ':'}
+symbols = {'ahead of': u'↑', 'behind': u'↓', 'prehash': u':'}
 
 from subprocess import Popen, PIPE
 
@@ -36,11 +36,11 @@ nb_untracked = len(Popen(['git', 'ls-files', '--others', '--exclude-standard'],
                          stdout=PIPE).communicate()[0].splitlines())
 untracked = str(nb_untracked)
 if not nb_changed and not nb_staged and not nb_U and not nb_untracked:
-    clean = '1'
+    clean = u'1'
 else:
-    clean = '0'
+    clean = u'0'
 
-remote = ''
+remote = u''
 
 if not branch:  # not on any branch
     branch = symbols['prehash'] + \
@@ -69,13 +69,13 @@ else:
         behead = revlist.splitlines()
         ahead = len([x for x in behead if x[0] == '>'])
         behind = len(behead) - ahead
-        remote = ':%s' % remote_name
+        remote = u':%s' % remote_name
         if behind:
-            remote += '%s%s' % (symbols['behind'], behind)
+            remote += u'%s%s' % (symbols['behind'], behind)
         if ahead:
-            remote += '%s%s' % (symbols['ahead of'], ahead)
+            remote += u'%s%s' % (symbols['ahead of'], ahead)
 
-out = '\n'.join([
+out = u'\n'.join([
     str(branch),
     remote,
     staged,
@@ -83,4 +83,5 @@ out = '\n'.join([
     changed,
     untracked,
     clean])
-print(out)
+
+print(out.encode('utf-8'))
