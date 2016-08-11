@@ -56,6 +56,27 @@ buffer is not visiting a file."
                          (ido-read-file-name "Find file(as root): ")))
     (find-alternate-file (concat "/sudo:root@localhost:" buffer-file-name))))
 
+;;; tide setup
+;;; https://github.com/ananthakumaran/tide/blob/master/README.md
+(require 'tide)
+
+(defun setup-tide-mode ()
+  "Set up tide mode."
+  (interactive)
+  (tide-setup)
+  (flycheck-mode +1)
+  (setq flycheck-check-syntax-automatically '(save mode-enabled))
+  (eldoc-mode +1))
+
+;; formats the buffer before saving
+(add-hook 'before-save-hook 'tide-format-before-save)
+
+(add-hook 'typescript-mode-hook #'setup-tide-mode)
+;;; end tide setup
+
+;; format options
+(setq tide-format-options '(:insertSpaceAfterFunctionKeywordForAnonymousFunctions t :placeOpenBraceOnNewLineForFunctions nil))
+
 (provide '.emacs-custom)
 ;;; .emacs-custom.el ends here
 
