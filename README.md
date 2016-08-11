@@ -13,6 +13,6 @@ Requirements:
 
 Installation:
 
-    make install
 	brew bundle
+    make install
 

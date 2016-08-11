@@ -1,5 +1,6 @@
 # Setup
-tap 'homebrew/bundle'
+cask_args appdir: '/Applications'
+tap 'Homebrew/bundle'
 tap 'caskroom/cask'
 tap 'railwaycat/emacsmacport'
 
@@ -26,3 +27,4 @@ brew "redis"
 brew "stow"
 brew "wget"
 brew "zsh-syntax-highlighting"
+cask "slack"
