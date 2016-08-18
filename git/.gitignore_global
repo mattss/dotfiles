@@ -18,3 +18,4 @@ tmtags
 .sass-cache
 *.mo
 .emacs.desktop*
+.autoenv

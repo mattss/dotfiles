@@ -89,3 +89,7 @@ export PATH="$PATH:$HOME/Library/Python/2.7/bin"
 
 # Github aliasing
 eval "$(hub alias -s)"
+
+# https://github.com/kennethreitz/autoenv
+AUTOENV_ENV_FILENAME=.autoenv
+source /usr/local/opt/autoenv/activate.sh
