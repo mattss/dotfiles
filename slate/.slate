@@ -40,7 +40,9 @@ layout desk 'Google Chrome':REPEAT ${windowed-left-offset} ${desk-monitor}
 layout desk 'Firefox':REPEAT ${windowed-left} ${desk-monitor}
 layout desk 'Timelog':REPEAT ${timelog-br} ${laptop-screen}
 layout desk 'Slack':REPEAT ${slack-bl} ${laptop-screen}
+layout desk AFTER shell '~/Dropbox/Scripts/geeklet_positions.scpt'
 
+	
 # Solo macbook layout
 layout solo 'iTerm2':REPEAT ${iterm-thin} ${laptop-screen}
 layout solo 'Emacs' ${singleeighty} ${laptop-screen}
