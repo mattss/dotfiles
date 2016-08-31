@@ -20,6 +20,10 @@
 
 (setq gist-view-gist t)
 
+;; https://github.com/editorconfig/editorconfig-emacs
+(require 'editorconfig)
+(editorconfig-mode 1)
+
 ;; emmet a.k.a zencoding
 ;; https://github.com/smihica/emmet-mode
 (require 'emmet-mode)
@@ -79,4 +83,3 @@ buffer is not visiting a file."
 
 (provide '.emacs-custom)
 ;;; .emacs-custom.el ends here
-
