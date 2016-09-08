@@ -50,6 +50,7 @@ layout solo 'Firefox':REPEAT ${full} ${laptop-screen}
 layout solo 'Mail':REPEAT ${full} ${desk-monitor}
 layout solo 'Adium':REPEAT ${topleft} ${laptop-screen} | ${topright} ${laptop-screen}
 layout solo 'Timelog':REPEAT ${timelog-br} ${laptop-screen}
+layout solo AFTER shell '~/Dropbox/Scripts/geeklet_positions_single.scpt'
 
 # PP layout
 layout pp 'iTerm2':REPEAT ${iterm-wide} ${pp-screen}
