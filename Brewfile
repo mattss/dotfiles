@@ -29,4 +29,11 @@ brew "stow"
 brew "wget"
 brew "zsh-syntax-highlighting"
 brew "autoenv"
+
+# Apps
 cask "slack"
+
+# Optionals
+# cask slate
+# cask controlplane
+# cask atext
