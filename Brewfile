@@ -37,3 +37,4 @@ cask "slack"
 # cask slate
 # cask controlplane
 # cask atext
+# cask deluge
