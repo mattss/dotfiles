@@ -38,3 +38,4 @@ cask "slack"
 # cask controlplane
 # cask atext
 # cask deluge
+# cask ubersicht
