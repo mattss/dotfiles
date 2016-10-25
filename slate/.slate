@@ -40,7 +40,6 @@ layout desk 'Google Chrome':REPEAT ${windowed-left-offset} ${desk-monitor}
 layout desk 'Firefox':REPEAT ${windowed-left} ${desk-monitor}
 layout desk 'Timelog':REPEAT ${timelog-br} ${laptop-screen}
 layout desk 'Slack':REPEAT ${slack-bl} ${laptop-screen}
-layout desk AFTER shell '~/Dropbox/Scripts/geeklet_positions.scpt'
 
 # Solo macbook layout
 layout solo 'iTerm2':REPEAT ${iterm-thin} ${laptop-screen}
@@ -50,7 +49,6 @@ layout solo 'Firefox':REPEAT ${full} ${laptop-screen}
 layout solo 'Mail':REPEAT ${full} ${desk-monitor}
 layout solo 'Adium':REPEAT ${topleft} ${laptop-screen} | ${topright} ${laptop-screen}
 layout solo 'Timelog':REPEAT ${timelog-br} ${laptop-screen}
-layout solo AFTER shell '~/Dropbox/Scripts/geeklet_positions_single.scpt'
 
 # PP layout
 layout pp 'iTerm2':REPEAT ${iterm-wide} ${pp-screen}
