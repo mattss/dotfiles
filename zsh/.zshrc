@@ -57,7 +57,8 @@ export PATH=$HOME/Dropbox/Scripts:/home/dev/devtools/scripts:$HOME/bin:/usr/loca
 # else
 #   export EDITOR='mvim'
 # fi
-export EDITOR='emacs'
+#export EDITOR='emacs'
+export EDITOR='nano'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -87,9 +88,19 @@ export PATH="$PATH:$HOME/.rvm/bin"
 # Add Python to PATH for scripting
 export PATH="$PATH:$HOME/Library/Python/2.7/bin"
 
+# Android dev
+export ANDROID_HOME="$HOME/Library/Android/sdk"
+export PATH="$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools"
+
 # Github aliasing
 eval "$(hub alias -s)"
 
 # https://github.com/kennethreitz/autoenv
 AUTOENV_ENV_FILENAME=.autoenv
 source /usr/local/opt/autoenv/activate.sh
+
+# http://backreference.org/2013/04/26/ssh-auto-reconnect/
+sssh(){
+  # try to connect every 0.5 secs (modulo timeouts)
+  while true; do command ssh "$@"; [ $? -ne 255 ] && break || sleep 0.5; done
+}
