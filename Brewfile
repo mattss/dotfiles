@@ -31,6 +31,7 @@ brew "stow"
 brew "wget"
 brew "zsh-syntax-highlighting"
 brew "autoenv"
+brew "yarn"
 
 # Apps
 cask "slack"
