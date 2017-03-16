@@ -4,6 +4,8 @@
 ;;; Integrates with netsight-emacs.
 ;;
 
+(setq visible-bell 1)
+
 ;;; Code:
 (setq custom-theme-directory (locate-user-emacs-file "themes"))
 
