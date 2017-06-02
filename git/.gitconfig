@@ -1,6 +1,9 @@
 [include]
     path = .gitconfig_private
 
+[user]
+# Don't put user details here - stick them in .gitconfig_private
+
 [branch]
 autosetupmerge = true
 autosetuprebase = always
