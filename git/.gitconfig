@@ -1,6 +1,5 @@
-[user]
-	name = Matthew Sital-Singh
-	email = mattss@netsight.co.uk
+[include]
+    path = .gitconfig_private
 
 [branch]
 autosetupmerge = true
@@ -45,3 +44,9 @@ unstash = stash apply
 
 [help]
 autocorrect = 5
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
