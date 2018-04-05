@@ -36,7 +36,7 @@ layout desk 'Emacs':REPEAT ${doubleeighty} ${desk-monitor}
 layout desk 'Calendar':REPEAT ${full} ${laptop-screen}
 layout desk 'Mail':REPEAT ${leftmost} ${desk-monitor}
 layout desk 'Adium':REPEAT ${topleft} ${laptop-screen} | ${topright} ${laptop-screen}
-layout desk 'Google Chrome':REPEAT ${windowed-left-offset} ${desk-monitor}
+layout desk 'Google Chrome':REPEAT ${windowed-left-offset} ${desk-monitor} | ${full} ${laptop-screen}
 layout desk 'Firefox':REPEAT ${windowed-left} ${desk-monitor}
 layout desk 'Timelog':REPEAT ${timelog-br} ${laptop-screen}
 layout desk 'Slack':REPEAT ${slack-bl} ${laptop-screen}
