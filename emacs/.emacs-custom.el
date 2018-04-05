@@ -20,7 +20,13 @@
 (require 'magit)
 (require 'use-package)
 
-(setq gist-view-gist t)
+(require 'ssass-mode)
+(add-to-list 'auto-mode-alist '("\\.scss\\'" . ssass-mode))
+
+;; Py-isort
+;; https://github.com/paetzke/py-isort.el
+(require 'py-isort)
+(add-hook 'before-save-hook 'py-isort-before-save)
 
 ;; https://github.com/editorconfig/editorconfig-emacs
 (require 'editorconfig)
@@ -82,6 +88,22 @@ buffer is not visiting a file."
 
 ;; format options
 (setq tide-format-options '(:insertSpaceAfterFunctionKeywordForAnonymousFunctions t :placeOpenBraceOnNewLineForFunctions nil))
+
+;; Minimal ACK interface
+(defvar ack-history nil
+  "History for the `ack' command.")
+
+(defun ack (command-args)
+    "Ack me up ."
+  (interactive
+   (let ((ack-command "ack --nofilter --nogroup --with-filename "))
+     (list (read-shell-command "Run ack (like this): "
+                               ack-command
+                               'ack-history))))
+  (let ((compilation-disable-input t))
+    (compilation-start (concat command-args " < " null-device)
+                       'grep-mode)))
+
 
 (provide '.emacs-custom)
 ;;; .emacs-custom.el ends here
