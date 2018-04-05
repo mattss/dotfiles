@@ -3,15 +3,15 @@
 # change those symbols to whatever you prefer
 symbols = {'ahead of': u'↑', 'behind': u'↓', 'prehash': u':'}
 
-from subprocess import Popen, PIPE
-
 import sys
+from subprocess import PIPE, Popen
+
 gitsym = Popen(['git', 'symbolic-ref', 'HEAD'], stdout=PIPE, stderr=PIPE)
 branch, error = gitsym.communicate()
 
 error_string = error.decode('utf-8')
 
-if 'fatal: Not a git repository' in error_string:
+if 'fatal: not a git repository' in error_string:
     sys.exit(0)
 
 
