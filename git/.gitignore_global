@@ -19,3 +19,4 @@ tmtags
 *.mo
 .emacs.desktop*
 .autoenv
+.envrc
